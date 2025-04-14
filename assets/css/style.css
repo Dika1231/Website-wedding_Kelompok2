@@ -36,32 +36,18 @@ body.transition {
 }
 
 .open {
-	background: var(--white);
-	height: 100%;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	align-content: center;
-	justify-content: center;
-	z-index: 3;
-	overflow-y: hidden;
-	transition: transform 1s ease-in-out;
-}
-
-.open {
   background: var(--white);
   width: 100%;
   height: 100vh;
-  position: fixed;
-  top: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 3;
+  position: relative;
   overflow: hidden;
+  z-index: 3;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .doors {
@@ -70,53 +56,51 @@ body.transition {
   align-items: stretch;
   width: 100%;
   max-width: 400px;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 2 / 3;
   position: relative;
-}
-
-@media (max-width: 480px) {
-  .doors {
-    max-width: 300px;
-    aspect-ratio: 3 / 5;
-  }
 }
 
 .door {
   flex: 1;
-  height: 100%;
-  transition: transform 1s ease, filter 0.5s ease;
   overflow: hidden;
+  position: relative;
+  z-index: 2;
 }
 
 .door img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
-
-.door.left {
-  transform-origin: left;
-}
-
-.door.right {
-  transform-origin: right;
-}
-
 
 .h1-heading {
-	position: absolute;
-	text-align: center;
-	width: 50%;
-	font-size: 45px;
-	margin: auto;
+  font-size: 36px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 3;
+  text-align: center;
 }
 
 .h1-heading.left {
-	left: 0;
+  align-self: flex-start;
+  margin-left: 20px;
 }
 
 .h1-heading.right {
-	right: 0;
+  align-self: flex-end;
+  margin-right: 20px;
+}
+@media (max-width: 480px) {
+  .doors {
+    max-width: 280px;
+    aspect-ratio: 3 / 5;
+  }
+
+  .h1-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 }
 
 .huruf-sambung {
