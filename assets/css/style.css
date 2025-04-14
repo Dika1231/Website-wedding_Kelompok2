@@ -52,14 +52,28 @@ body.transition {
 }
 
 .doors {
-	width: 400px;
-	height: 500px;
-	position: relative;
-	cursor: pointer;
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
+  width: 90vw;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
+
+@media (max-width: 480px) {
+  .doors {
+    width: 95vw;
+    aspect-ratio: 3 / 4;
+  }
+
+  .door img {
+    object-fit: cover;
+  }
+}
+
 
 .door {
 	width: 50%;
