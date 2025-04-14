@@ -52,21 +52,23 @@ body.transition {
 }
 
 .doors {
-  width: 90vw;
+  width: 100%;
   max-width: 400px;
-  aspect-ratio: 3 / 4;
+  height: auto;
+  aspect-ratio: 4 / 5;
   position: relative;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: stretch;
+  margin: 0 auto;
 }
 
 .door {
   width: 48%;
   height: 100%;
   position: relative;
-  transition: transform 1s, filter 0.5s;
+  transition: transform 1s ease, filter 0.5s ease;
   overflow: hidden;
 }
 
@@ -77,11 +79,11 @@ body.transition {
 }
 
 .door.left {
-  transform-origin: center left;
+  transform-origin: left;
 }
 
 .door.right {
-  transform-origin: center right;
+  transform-origin: right;
 }
 
 .h1-heading {
